@@ -95,7 +95,7 @@ Job family: \textbf{finance \& accounting}. Data: 12 real LinkedIn postings (Kag
 \begin{homeworkProblem}[1. Problem framing]
 A recruiter with 15--300 applicants wants a \textbf{short list they can trust}, and the guarantee that \textbf{nobody good is quietly dropped}. So Tally only ever \emph{promotes} (Shortlist) or \emph{routes to a human} (Needs review / Low priority), and every line of its reasoning is a checklist item with a quote. Missing a good candidate is costed at 5$\times$ shortlisting a weak one.
 
-\textbf{Not built}: auto-reject; an LLM that outputs a score; OCR/PDF parsing (the data is text); multi-family support; learning-to-rank (180 labels is not enough to train on and still evaluate honestly).
+\textbf{Not built}: auto-reject; an LLM that outputs a score; OCR for scanned PDFs (text-layer PDFs and pasted job descriptions are supported); multi-family support; learning-to-rank (180 labels is not enough to train on and still evaluate honestly).
 \end{homeworkProblem}
 
 %----------------------------------------------------------------------------
@@ -103,6 +103,11 @@ A recruiter with 15--300 applicants wants a \textbf{short list they can trust}, 
 Posting $\rightarrow$ LLM checklist (4--10 requirements: must/nice, category, years/degree, source quote). Resume $\rightarrow$ clean (NFKC, invisible characters, PII mask, injection regex) $\rightarrow$ LLM profile (roles with dates, degrees, certifications). Per requirement, years and degree are compared \textbf{in code}; everything else is graded by the LLM \textbf{from the 5 resume passages BM25 retrieves for it}, with a verbatim quote that code verifies (no match $\rightarrow$ zero credit + review). Score $= \Sigma\,\text{weight}\cdot\text{credit} / \Sigma\,\text{weight}$ (must $\times2$, nice $\times1$; met 1, partial $\tfrac12$, not met 0).
 
 \textbf{Lanes.} \emph{Shortlist}: score $\geq 0.525$, at most one must-have not fully met, no blocking flag. \emph{Low priority}: score $< 0.35$ with a must-have missing and no blocking flag. \emph{Needs review}: everything else, with reason codes (\code{MUST\_NOT\_MET}, \code{MUST\_PARTIAL}, \code{BORDERLINE}, \code{INJECTION}, \code{KEYWORD\_STUFFING}, \code{UNVERIFIED\_QUOTE}, \code{DATES\_UNCLEAR}, \code{THIN\_RESUME}; \code{LOCATION} is information only). The one allowed gap is always named in the explanation as ``Ask about: \ldots''.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.49\linewidth]{docs/ui_dash.png}\hfill\includegraphics[width=0.49\linewidth]{docs/ui_job.png}
+\caption{The Tally interface. Left: roles dashboard with lane counts and shortlist rate. Right: one role's applicants, with must-haves met, relevant years, match score and lane.}
+\end{figure}
 \end{homeworkProblem}
 
 %----------------------------------------------------------------------------

@@ -12,7 +12,7 @@ from flask import Flask, abort, jsonify, request, send_from_directory
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from tally import golden, llm, screen, store  # noqa: E402
+from tally import golden, ingest, llm, screen, store  # noqa: E402
 from tally.clean import clean_resume  # noqa: E402
 from tally.config import path, read_json  # noqa: E402
 
@@ -69,6 +69,25 @@ def list_jobs():
     return jsonify({"jobs": out, "llm": llm.status()})
 
 
+@app.post("/api/jobs")
+def create_job():
+    """Add a role from a pasted or uploaded (PDF/txt) job description. The LLM turns it into a checklist."""
+    f, form = request.files.get("file"), request.form
+    try:
+        text = ingest.file_text(f.filename or "", f.read()) if f and f.filename else (form.get("text") or "")
+        j = ingest.job_record(form.get("title", ""), form.get("company", ""), form.get("location", ""),
+                              form.get("level", ""), text, len(screen.NEW_JOBS) + 1)
+    except ingest.IngestError as e:
+        return jsonify({"error": str(e)}), 400
+    screen.NEW_JOBS[j["id"]] = j
+    try:
+        screen.job_checklist(j["id"])
+        return jsonify({"id": j["id"], "pending": False})
+    except llm.Pending:
+        return jsonify({"id": j["id"], "pending": True,
+                        "message": "Queued for the LLM (provider=queue). Answer the queue, then refresh."})
+
+
 @app.get("/api/jobs/<job_id>")
 def job_detail(job_id):
     j = _job(job_id)
@@ -117,7 +136,10 @@ def upload(job_id):
     """Paste or upload a plain-text resume. Kept in memory for this server session only."""
     _job(job_id)
     f = request.files.get("file")
-    raw = f.read().decode("utf-8", "replace") if f else (request.form.get("text") or "")
+    try:
+        raw = ingest.file_text(f.filename or "", f.read()) if f and f.filename else (request.form.get("text") or "")
+    except ingest.IngestError as e:
+        return jsonify({"error": str(e)}), 400
     if len(raw.split()) < 30:
         return jsonify({"error": "Resume text is too short (need at least 30 words)."}), 400
     rec = clean_resume(raw.replace("\n", "   "))

@@ -38,8 +38,15 @@ BLOCKING = {"INJECTION", "THIN_RESUME", "DATES_UNCLEAR", "UNVERIFIED_QUOTE", "KE
 
 
 @lru_cache
-def jobs() -> dict:
+def _base_jobs() -> dict:
     return read_json(path("work") / "jobs.json")
+
+
+NEW_JOBS: dict[str, dict] = {}  # roles added in the UI; memory only, like uploaded resumes
+
+
+def jobs() -> dict:
+    return {**_base_jobs(), **NEW_JOBS}
 
 
 @lru_cache

@@ -64,39 +64,87 @@ async function jobs() {
   $view.innerHTML = `<p class="text-muted">Loading jobs…</p>`;
   const d = await api("/api/jobs");
   const pend = Object.values(d.llm.pending || {}).reduce((a, b) => a + b, 0);
+  const sum = (k) => d.jobs.reduce((a, j) => a + (k === "total" ? j.total : j.lanes[k]), 0);
+  const kpi = [["Open roles", d.jobs.length, "bg-accent/10 text-accent"], ["Applicants", sum("total"), "bg-met/10 text-met"],
+               ["Shortlisted", sum("shortlist"), "bg-met/10 text-met"], ["Needs review", sum("review"), "bg-part/10 text-part"]];
   $view.innerHTML = `
     <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
-      <div>
-        <h1 class="text-2xl font-semibold tracking-tight">Open roles</h1>
-        <p class="text-muted text-sm mt-1">Each role has 15 applicants. Tally checks every applicant against the posting's requirements and sorts them into three lanes. It never rejects anyone.</p>
-      </div>
-      <div class="text-xs text-muted font-mono">LLM: ${esc(d.llm.model)}${pend ? ` · ${pend} queued` : ""}</div>
+      <div><h1 class="text-2xl font-semibold tracking-tight">Screen at scale with Tally</h1>
+        <p class="text-muted text-sm mt-1">Every applicant is checked against the posting's requirements and sorted into three lanes. It never rejects anyone.</p></div>
+      <div class="flex items-center gap-3"><span class="text-xs text-muted">LLM: <span class="font-mono">${esc(d.llm.model)}</span>${pend ? ` · ${pend} queued` : ""}</span>
+        <button id="new-role" class="text-sm px-4 py-2 rounded-lg bg-accent text-white hover:opacity-90">+ New role</button></div>
     </div>
-    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+      ${kpi.map(([l, v, c]) => `<div class="rounded-2xl border border-rule bg-card p-4 flex items-center gap-3">
+        <span class="grid place-items-center w-11 h-11 rounded-full ${c} text-lg font-semibold">${v}</span>
+        <div class="text-sm text-muted leading-tight">${l}</div></div>`).join("")}
+    </div>
+    <div class="rounded-2xl border border-rule bg-card overflow-hidden">
+      <div class="hidden md:grid grid-cols-[2.2fr_1.4fr_1fr_1.6fr_.8fr_24px] gap-3 px-4 py-2.5 text-xs text-muted bg-paper/70">
+        <span>Role</span><span>Company</span><span>Level</span><span>Lanes</span><span>Shortlist rate</span><span></span></div>
       ${d.jobs.map(jobCard).join("")}
     </div>`;
+  document.getElementById("new-role").onclick = openNewRole;
+}
+
+function openNewRole() {
+  const wrap = document.createElement("div");
+  wrap.className = "fixed inset-0 z-40 bg-black/40 grid place-items-center p-4 overflow-y-auto";
+  const inp = "w-full rounded-lg border border-rule bg-paper p-2.5 text-sm";
+  wrap.innerHTML = `
+    <form class="w-full max-w-xl rounded-2xl bg-card border border-rule p-5 space-y-3">
+      <h2 class="font-semibold">Add a role</h2>
+      <p class="text-sm text-muted">Paste the job description or choose a PDF or .txt file. The LLM turns it into a must-have / nice-to-have checklist; the roles you add live in memory only.</p>
+      <div class="grid grid-cols-2 gap-2">
+        <input name="title" required placeholder="Job title *" class="${inp} col-span-2">
+        <input name="company" placeholder="Company" class="${inp}">
+        <input name="location" placeholder="Location" class="${inp}">
+        <select name="level" class="${inp} col-span-2"><option value="">Level (optional)</option>
+          ${["Internship", "Entry level", "Associate", "Mid-Senior level", "Director"].map((l) => `<option>${l}</option>`).join("")}</select>
+      </div>
+      <textarea name="text" rows="9" class="${inp} font-mono" placeholder="Paste the job description…"></textarea>
+      <input type="file" name="file" accept=".pdf,.txt,application/pdf,text/plain" class="text-sm">
+      <div class="flex justify-end gap-2">
+        <button type="button" data-close class="px-3 py-1.5 rounded-md border border-rule text-sm">Cancel</button>
+        <button class="px-3 py-1.5 rounded-md bg-accent text-white text-sm">Create role</button>
+      </div>
+    </form>`;
+  document.body.appendChild(wrap);
+  wrap.querySelector("[data-close]").onclick = () => wrap.remove();
+  wrap.querySelector("form").onsubmit = async (ev) => {
+    ev.preventDefault();
+    try {
+      const r = await fetch("/api/jobs", { method: "POST", body: new FormData(ev.target) });
+      const d = await r.json();
+      if (!r.ok) return toast(d.error);
+      wrap.remove();
+      toast(d.pending ? d.message : "Role created");
+      location.hash = `#/job/${d.id}`;
+      route();
+    } catch (e) { toast(e.message); }
+  };
+}
+
+function ring(pct, color = "var(--color-accent)") {
+  return `<span class="relative inline-grid place-items-center w-10 h-10 rounded-full" style="background:conic-gradient(${color} ${pct * 3.6}deg, var(--color-rule) 0)">
+    <span class="grid place-items-center w-7 h-7 rounded-full bg-card text-[10px] font-semibold">${Math.round(pct)}%</span></span>`;
 }
 
 function jobCard(j) {
-  const total = Math.max(1, j.total);
-  const bar = ["shortlist", "review", "low_priority"].map((l) =>
-    `<span class="${LANE[l].dot} h-full" style="width:${(100 * j.lanes[l]) / total}%"></span>`).join("");
+  const total = Math.max(1, j.total), rate = (100 * j.lanes.shortlist) / total;
+  const pill = (n, cls, l) => `<span class="px-2 py-0.5 rounded-full text-xs ${cls}">${n} ${l}</span>`;
   return `
-    <a href="#/job/${j.id}" class="group block rounded-xl border border-rule bg-card p-4 hover:border-accent/60 hover:shadow-sm transition">
-      <div class="flex items-start justify-between gap-2">
-        <div class="min-w-0">
-          <div class="font-medium leading-snug group-hover:text-accent">${esc(j.title)}</div>
-          <div class="text-sm text-muted truncate">${esc(j.company)} · ${esc(j.location)}</div>
-        </div>
-        <span class="font-mono text-xs text-muted shrink-0">${j.id}</span>
+    <a href="#/job/${j.id}" class="group grid md:grid-cols-[2.2fr_1.4fr_1fr_1.6fr_.8fr_24px] gap-3 items-center px-4 py-3.5 border-t border-rule hover:bg-paper/60 transition">
+      <div class="flex items-center gap-3 min-w-0">
+        <span class="grid place-items-center w-10 h-10 rounded-xl bg-accent/10 text-accent font-semibold shrink-0">${esc(j.title.slice(0, 1))}</span>
+        <div class="min-w-0"><div class="font-medium leading-snug truncate group-hover:text-accent">${esc(j.title)}</div>
+          <div class="text-xs text-muted font-mono">${j.id} · ${j.decided}/${j.total} triaged${j.pending ? ` · ${j.pending} queued` : ""}</div></div>
       </div>
-      <div class="mt-4 flex h-2 rounded-full overflow-hidden bg-paper">${bar}</div>
-      <div class="mt-2 flex items-center gap-3 text-xs text-muted">
-        <span><b class="text-met font-semibold">${j.lanes.shortlist}</b> shortlist</span>
-        <span><b class="text-part font-semibold">${j.lanes.review}</b> review</span>
-        <span><b class="font-semibold">${j.lanes.low_priority}</b> low</span>
-        <span class="ml-auto">${j.decided}/${j.total} triaged${j.pending ? ` · ${j.pending} queued` : ""}</span>
-      </div>
+      <div class="text-sm min-w-0"><div class="truncate">${esc(j.company)}</div><div class="text-xs text-muted truncate">${esc(j.location)}</div></div>
+      <div class="text-sm text-muted">${esc(j.level || "n/a")}</div>
+      <div class="flex flex-wrap gap-1.5">${pill(j.lanes.shortlist, "bg-met/10 text-met", "shortlist")}${pill(j.lanes.review, "bg-part/10 text-part", "review")}${pill(j.lanes.low_priority, "bg-paper text-muted", "low")}</div>
+      <div>${ring(rate, "var(--color-met)")}</div>
+      <span class="text-muted hidden md:block">›</span>
     </a>`;
 }
 
@@ -131,10 +179,10 @@ function renderInboxShell(candId) {
       <a href="#/" class="text-sm text-muted hover:text-ink">← Jobs</a>
       <div class="min-w-0 flex-1">
         <h1 class="text-xl font-semibold tracking-tight">${esc(j.title)}</h1>
-        <div class="text-sm text-muted">${esc(j.company)} · ${esc(j.location)} · ${esc(j.level || "level n/a")}</div>
+        <div class="flex flex-wrap gap-1.5 mt-1.5 text-xs">${[j.company, j.location, j.work_type, j.level, state.cands.length + " applicants"].filter(Boolean).map((x) => `<span class="px-2.5 py-1 rounded-md bg-card border border-rule">${esc(x)}</span>`).join("")}</div>
       </div>
-      <button id="toggle-posting" class="text-sm px-3 py-1.5 rounded-md border border-rule hover:bg-card">Posting &amp; checklist</button>
-      <button id="open-upload" class="text-sm px-3 py-1.5 rounded-md bg-ink text-paper hover:opacity-90">+ Add resume</button>
+      <button id="toggle-posting" class="text-sm px-3 py-2 rounded-lg border border-rule bg-card hover:bg-paper">Posting &amp; checklist</button>
+      <button id="open-upload" class="text-sm px-4 py-2 rounded-lg bg-accent text-white hover:opacity-90">+ Add resume</button>
     </div>
     <div class="mb-3">
       <div class="flex items-center justify-between text-xs text-muted mb-1">
@@ -144,13 +192,14 @@ function renderInboxShell(candId) {
       <div class="h-1.5 rounded-full bg-rule overflow-hidden"><div class="h-full bg-accent" style="width:${(100 * done) / Math.max(1, state.cands.length)}%"></div></div>
     </div>
     <div id="posting" class="hidden mb-4"></div>
-    <div class="flex gap-1 overflow-x-auto pb-2 text-sm">
-      ${tabs.map(([k, label]) => `<button data-filter="${k}" class="shrink-0 px-3 py-1.5 rounded-full border ${state.filter === k ? "bg-ink text-paper border-ink" : "border-rule hover:bg-card"}">${label} <span class="opacity-60">${counts[k]}</span></button>`).join("")}
+    <div class="flex gap-6 overflow-x-auto text-sm border-b border-rule">
+      ${tabs.map(([k, label]) => `<button data-filter="${k}" class="shrink-0 py-2.5 -mb-px border-b-2 ${state.filter === k ? "border-accent text-accent font-medium" : "border-transparent text-muted hover:text-ink"}">${label} (${counts[k]})</button>`).join("")}
     </div>
-    <div class="flex gap-1.5 overflow-x-auto py-2" id="strip">
-      ${filtered().map((c) => stripChip(c, candId)).join("") || `<span class="text-sm text-muted">Nothing here.</span>`}
+    <div class="mt-4 rounded-2xl border border-rule bg-card overflow-hidden" id="strip">
+      <div class="grid grid-cols-[2fr_1fr_.8fr_.8fr_1fr] gap-3 px-4 py-2.5 text-xs text-muted bg-paper/70"><span>Candidate</span><span>Must-haves</span><span>Exp.</span><span>AI match</span><span>Status</span></div>
+      <div class="max-h-80 overflow-y-auto">${filtered().map((c) => stripChip(c, candId)).join("") || `<div class="p-4 text-sm text-muted">Nothing here.</div>`}</div>
     </div>
-    <div id="card" class="mt-2"></div>`;
+    <div id="card" class="mt-4"></div>`;
   document.querySelectorAll("[data-filter]").forEach((b) => (b.onclick = () => {
     state.filter = b.dataset.filter;
     const first = filtered()[0];
@@ -163,13 +212,20 @@ function renderInboxShell(candId) {
 }
 
 function stripChip(c, active) {
-  const on = c.cand === active;
+  const on = c.cand === active, pct = Math.round(c.score * 100);
+  const badge = pct >= 70 ? "bg-met/15 text-met" : pct >= 50 ? "bg-part/15 text-part" : "bg-paper text-muted";
+  const status = c.action ? ACTION[c.action] : LANE[c.lane].label;
+  const hue = [...c.cand].reduce((a, ch) => a + ch.charCodeAt(0), 0) % 360;
   return `<a id="chip-${c.cand}" href="#/job/${state.job.id}/${c.cand}" title="${esc(c.headline)}"
-      class="shrink-0 flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-lg border text-xs ${on ? "border-accent bg-card shadow-sm" : "border-rule hover:bg-card"}">
-      <span class="w-2 h-2 rounded-full ${LANE[c.lane].dot}"></span>
-      <span class="font-mono">${c.score.toFixed(2)}</span>
-      <span class="text-muted">${esc(c.cand)}</span>
-      ${c.action ? `<span class="text-accent">•</span>` : ""}
+      class="grid grid-cols-[2fr_1fr_.8fr_.8fr_1fr] gap-3 items-center px-4 py-2.5 border-t border-rule text-sm ${on ? "bg-accent/5" : "hover:bg-paper/60"}">
+      <div class="flex items-center gap-3 min-w-0">
+        <span class="grid place-items-center w-9 h-9 rounded-full text-xs font-semibold shrink-0" style="background:hsl(${hue} 70% 90%);color:hsl(${hue} 55% 32%)">${esc(c.headline.slice(0, 2).toUpperCase())}</span>
+        <div class="min-w-0"><div class="font-medium truncate capitalize">${esc(c.headline.toLowerCase())}</div><div class="text-xs text-muted font-mono">${esc(c.cand)}</div></div>
+      </div>
+      <div class="flex items-center gap-1.5 text-xs"><span class="px-2 py-0.5 rounded-md bg-paper">${c.musts_met}/${c.musts} musts</span></div>
+      <div><span class="px-2 py-1 rounded-md bg-paper text-xs font-medium">${c.years}<sup class="text-[8px] ml-0.5">Yrs</sup></span></div>
+      <div><span class="px-2.5 py-1 rounded-md text-xs font-semibold ${badge}">${pct}%</span></div>
+      <div class="text-accent text-xs leading-tight">${esc(status)}</div>
     </a>`;
 }
 
@@ -319,9 +375,9 @@ function openUpload() {
   wrap.innerHTML = `
     <form class="w-full max-w-xl rounded-2xl bg-card border border-rule p-5 space-y-3">
       <h2 class="font-semibold">Add a resume to ${esc(state.job.title)}</h2>
-      <p class="text-sm text-muted">Paste plain text or choose a .txt file. Contact details are masked before anything is sent to the LLM. Uploads live in memory only.</p>
+      <p class="text-sm text-muted">Paste text or choose a PDF or .txt file (PDFs need a text layer; scans are not read). Contact details are masked before anything is sent to the LLM. Uploads live in memory only.</p>
       <textarea name="text" rows="10" class="w-full rounded-lg border border-rule bg-paper p-3 text-sm font-mono" placeholder="Paste resume text…"></textarea>
-      <input type="file" name="file" accept=".txt,text/plain" class="text-sm">
+      <input type="file" name="file" accept=".pdf,.txt,application/pdf,text/plain" class="text-sm">
       <div class="flex justify-end gap-2">
         <button type="button" data-close class="px-3 py-1.5 rounded-md border border-rule text-sm">Cancel</button>
         <button class="px-3 py-1.5 rounded-md bg-ink text-paper text-sm">Screen it</button>
