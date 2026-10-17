@@ -1,0 +1,31 @@
+job,cand,grounded,gaps_correct,actionable,rationale
+J12,C95519832,5,5,5,"The explanation accurately identifies the candidate's degree, experience, and correctly flags the missing accreditation and software skills, providing clear recruiter next steps."
+J10,C14496667,5,4,5,"The explanation accurately reflects resume details, correctly identifies missing software/nice-to-haves, and gives clear next steps for the recruiter."
+J03,C11877150,5,5,5,"The explanation accurately identifies the degree status, correctly notes the missing payroll and software requirements, and provides a clear next step for the recruiter."
+J11,C78229715,4,4,5,"The explanation accurately identifies degree and experience, but misses some subtle GAAP/SOX elements. Gaps and next steps are clear for the recruiter."
+J04,C14449423,5,5,5,"The explanation correctly identifies all met requirements with accurate quotes, accurately flags the absence of GAAP knowledge, and provides a clear next step for the recruiter."
+J07,C12071138,5,4,5,"All cited claims and quotes are fully supported by the resume. Month-end reporting is partially evidenced, making the gap identification accurate and actionable."
+J02,C15535920,5,5,5,"The explanation accurately identifies the applicant lacks an accounting degree (has Business Management), lacks finance/accounting experience, and misses specific software and construction requirements."
+J11,C36425270,2,3,4,"The explanation misattributes manufacturing finance experience which is missing from the resume, though it correctly identifies degree and GAAP references."
+J03,C10554236,5,4,5,"The explanation accurately identifies the degree requirement as met and lists relevant gaps, though payroll experience is arguably present via Accounts Payable management."
+J09,C12955994,5,5,5,"The screening explanation accurately identifies missing must-haves, properly cites the resume text, and gives actionable advice to verify the CPA certification."
+J07,C14181049,5,4,5,"The claims accurately reflect the resume evidence and dates are indeed missing for most past roles, making experience calculation difficult."
+J11,C28939941,5,5,5,The explanation accurately identifies missing must-haves and correctly assesses the resume contents with no false claims.
+J05,C23955183,5,5,5,"The explanation accurately reflects the resume contents, correctly identifies the major missing tax and CPA requirements, and provides clear areas to probe."
+J11,C20574232,5,5,5,"The explanation correctly identifies all missing requirements based on the IT background of the candidate, accurately noting the wrong degree and complete lack of finance experience."
+J05,C28973180,2,5,4,"The explanation misattributes civil engineering degrees as accounting or tax degrees, but correctly identifies the major gaps like lack of CPA, tax expertise, and public accounting experience."
+J11,C16237710,4,5,5,"The explanation correctly identifies all met requirements, missing skills, and provides a clear next step for the recruiter."
+J03,C20918464,2,4,4,"The explanation incorrectly claims the candidate has an Associate degree; the resume shows a B.Com, M.Com, and MBA. Gaps and next steps are mostly accurate."
+J09,C22622351,3,4,4,"The explanation correctly identifies the lack of a CPA license, but misinterprets non-Big 4 experience and general management as Big 4 public audit experience."
+J02,C11441764,4,4,4,"The explanation correctly assesses degrees and experience, but assumes Timberline from SAP mentions. Gaps and next steps are mostly accurate."
+J04,C14722634,4,5,5,Accurately identifies resume content and real gaps such as Microsoft Office. Minor stretch on specific state reconciliation procedures from general trial balance text.
+J02,C78257294,4,5,5,"Accurately identifies degree and experience requirements as met, correctly spots missing Timberline and construction/WIP experience, and gives clear next steps for the recruiter."
+J12,C47410104,2,3,4,"The explanation incorrectly states the candidate has a bachelor's in finance when the resume shows a B.S. in Statistics. Gaps are mostly correct, though experience is present."
+J12,C20552814,5,5,5,"The explanation accurately identifies the candidate lacks the degree, accreditation, and software proficiency, while correctly noting minor finance/banking background."
+J02,C24294778,4,5,5,Grounded well in resume text; correctly identifies missing construction WIP schedule and Sage Timberline specifics; actionable next steps provided.
+J02,C53640713,4,4,5,The explanation correctly identifies software and experience gaps based on the resume evidence and gives specific areas to verify.
+J09,C11441764,5,5,5,"The explanation accurately identifies all missing requirements such as CPA and Big 4 experience, correctly notes SOX compliance mentions, and provides clear, actionable steps for the recruiter."
+J07,C29998869,4,4,5,"The candidate has extensive FP&A and budgeting experience dating back to 2002, fully meeting requirements despite minor gaps in explicit month-end reporting mentions."
+J04,C23734441,5,5,5,"The explanation correctly aligns resume quotes with requirements, identifies Microsoft Office as partial based on listed skills, and provides a clear next step."
+J03,C27233183,2,4,3,The explanation incorrectly claims an associate degree in accounting exists. The resume only shows a high school diploma and a dental assistant certificate.
+J09,C24670867,5,5,5,"The explanation accurately identifies the candidate's lack of a CPA, correctly catches the partial SOX/audit evidence, and provides actionable next steps for the recruiter."

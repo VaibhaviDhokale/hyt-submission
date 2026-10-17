@@ -1,0 +1,16 @@
+{
+  "shortlist_at": 0.725,
+  "low_priority_below": 0.35,
+  "tuned_on": "dev jobs J01,J06,J08",
+  "n_dev_pairs": 45,
+  "dev": {
+    "shortlisted": 5,
+    "good": 22,
+    "true_shortlists": 5,
+    "shortlist_precision": 1.0,
+    "shortlist_recall": 0.22727272727272727,
+    "review_rate": 0.8888888888888888,
+    "good_in_low_priority": 0,
+    "cost": 85
+  }
+}

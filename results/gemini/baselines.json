@@ -1,0 +1,64 @@
+{
+  "split": "test",
+  "systems": [
+    {
+      "system": "Tally (checklist + rules)",
+      "ndcg@5": 0.747,
+      "ndcg@10": 0.823,
+      "p@5": 0.578,
+      "spearman": 0.623,
+      "shortlisted": 54,
+      "good": 40,
+      "true_shortlists": 23,
+      "shortlist_precision": 0.42592592592592593,
+      "shortlist_recall": 0.575,
+      "review_rate": 0.6,
+      "good_in_low_priority": 1,
+      "cost": 116,
+      "ndcg@5_ci": [
+        0.634,
+        0.84
+      ]
+    },
+    {
+      "system": "keyword overlap",
+      "threshold_from_dev": 0.3,
+      "ndcg@5": 0.704,
+      "ndcg@10": 0.747,
+      "p@5": 0.622,
+      "spearman": 0.535,
+      "shortlisted": 103,
+      "good": 40,
+      "true_shortlists": 37,
+      "shortlist_precision": 0.3592233009708738,
+      "shortlist_recall": 0.925,
+      "review_rate": 0.23703703703703705,
+      "good_in_low_priority": 0,
+      "cost": 81,
+      "ndcg@5_ci": [
+        0.593,
+        0.8
+      ]
+    },
+    {
+      "system": "TF-IDF cosine",
+      "threshold_from_dev": 0.35,
+      "ndcg@5": 0.761,
+      "ndcg@10": 0.813,
+      "p@5": 0.6,
+      "spearman": 0.614,
+      "shortlisted": 82,
+      "good": 40,
+      "true_shortlists": 32,
+      "shortlist_precision": 0.3902439024390244,
+      "shortlist_recall": 0.8,
+      "review_rate": 0.3925925925925926,
+      "good_in_low_priority": 0,
+      "cost": 90,
+      "ndcg@5_ci": [
+        0.667,
+        0.837
+      ]
+    }
+  ]
+}

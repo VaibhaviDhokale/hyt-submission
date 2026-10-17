@@ -1,0 +1,1836 @@
+{
+  "dev": {
+    "n_pairs": 45,
+    "n_jobs": 3,
+    "ndcg@5": 0.771,
+    "ndcg@10": 0.851,
+    "p@5": 0.933,
+    "spearman": 0.692,
+    "shortlisted": 16,
+    "good": 23,
+    "true_shortlists": 16,
+    "shortlist_precision": 1.0,
+    "shortlist_recall": 0.6956521739130435,
+    "review_rate": 0.6444444444444444,
+    "good_in_low_priority": 0,
+    "cost": 35,
+    "ndcg@5_ci": [
+      0.524,
+      0.984
+    ],
+    "lanes": {
+      "shortlist": 16,
+      "review": 22,
+      "low_priority": 7
+    },
+    "label_dist": {
+      "0": 13,
+      "1": 8,
+      "2": 12,
+      "3": 12
+    },
+    "per_job": {
+      "J01": {
+        "ndcg@5": 0.984,
+        "ndcg@10": 0.917,
+        "p@5": 1.0,
+        "spearman": 0.657
+      },
+      "J06": {
+        "ndcg@5": 0.524,
+        "ndcg@10": 0.737,
+        "p@5": 0.8,
+        "spearman": 0.569
+      },
+      "J08": {
+        "ndcg@5": 0.806,
+        "ndcg@10": 0.898,
+        "p@5": 1.0,
+        "spearman": 0.849
+      }
+    }
+  },
+  "test": {
+    "n_pairs": 135,
+    "n_jobs": 9,
+    "ndcg@5": 0.799,
+    "ndcg@10": 0.861,
+    "p@5": 0.644,
+    "spearman": 0.691,
+    "shortlisted": 37,
+    "good": 40,
+    "true_shortlists": 22,
+    "shortlist_precision": 0.5945945945945946,
+    "shortlist_recall": 0.55,
+    "review_rate": 0.7259259259259259,
+    "good_in_low_priority": 0,
+    "cost": 105,
+    "ndcg@5_ci": [
+      0.697,
+      0.888
+    ],
+    "lanes": {
+      "shortlist": 37,
+      "review": 64,
+      "low_priority": 34
+    },
+    "label_dist": {
+      "0": 47,
+      "1": 40,
+      "2": 30,
+      "3": 18
+    },
+    "per_job": {
+      "J02": {
+        "ndcg@5": 0.883,
+        "ndcg@10": 0.838,
+        "p@5": 0.8,
+        "spearman": 0.426
+      },
+      "J03": {
+        "ndcg@5": 0.917,
+        "ndcg@10": 0.956,
+        "p@5": 0.6,
+        "spearman": 0.866
+      },
+      "J04": {
+        "ndcg@5": 0.736,
+        "ndcg@10": 0.858,
+        "p@5": 0.8,
+        "spearman": 0.733
+      },
+      "J05": {
+        "ndcg@5": 0.805,
+        "ndcg@10": 0.935,
+        "p@5": 0.0,
+        "spearman": 0.631
+      },
+      "J07": {
+        "ndcg@5": 0.475,
+        "ndcg@10": 0.732,
+        "p@5": 0.8,
+        "spearman": 0.515
+      },
+      "J09": {
+        "ndcg@5": 0.868,
+        "ndcg@10": 0.881,
+        "p@5": 0.6,
+        "spearman": 0.878
+      },
+      "J10": {
+        "ndcg@5": 0.651,
+        "ndcg@10": 0.77,
+        "p@5": 0.8,
+        "spearman": 0.736
+      },
+      "J11": {
+        "ndcg@5": 0.855,
+        "ndcg@10": 0.868,
+        "p@5": 0.4,
+        "spearman": 0.817
+      },
+      "J12": {
+        "ndcg@5": 1.0,
+        "ndcg@10": 0.909,
+        "p@5": 1.0,
+        "spearman": 0.617
+      }
+    }
+  },
+  "test_pairs": [
+    {
+      "job": "J02",
+      "cand": "C26065877",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 0.625,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C17407184",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.625,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C10329506",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C27637576",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 0.375,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C39675895",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.375,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C15535920",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.375,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.625,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C49204385",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.375,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C11441764",
+      "bucket": "random_core",
+      "rel": 3,
+      "good": true,
+      "score": 0.688,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C53640713",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C14470533",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": false,
+      "score": 0.562,
+      "lane": "review",
+      "reasons": [
+        "DATES_UNCLEAR",
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C78257294",
+      "bucket": "hard_title_match",
+      "rel": 2,
+      "good": true,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C24294778",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.625,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C13199813",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J02",
+      "cand": "C63083944",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.562,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C21830565",
+      "bucket": "hard_lookalike",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.833,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J03",
+      "cand": "C20918464",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.667,
+      "lane": "shortlist",
+      "reasons": [
+        "LOCATION"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C53640713",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.667,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J03",
+      "cand": "C63670997",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.333,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C11877150",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.333,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C27233183",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.167,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C25547145",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.167,
+      "lane": "review",
+      "reasons": [
+        "DATES_UNCLEAR",
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C10554236",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.333,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C42487883",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.333,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C38007664",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.0,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C27409087",
+      "bucket": "hard_title_match",
+      "rel": 2,
+      "good": true,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C24294778",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.75,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J03",
+      "cand": "C92524964",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "LOCATION",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J03",
+      "cand": "C29821051",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.333,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.909,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C29050809",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.909,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C14449423",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.818,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C14722634",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 0.727,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C13574264",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.0,
+      "lane": "review",
+      "reasons": [
+        "DATES_UNCLEAR",
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C12065211",
+      "bucket": "hard_title_match",
+      "rel": 2,
+      "good": true,
+      "score": 0.727,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C16280971",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.0,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C22465498",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 0.636,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C95519832",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.0,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C12780508",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.636,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C37997506",
+      "bucket": "random_core",
+      "rel": 3,
+      "good": true,
+      "score": 0.909,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C18369400",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.0,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C12955994",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.227,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C50222417",
+      "bucket": "random_core",
+      "rel": 3,
+      "good": true,
+      "score": 0.818,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J04",
+      "cand": "C24703009",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.455,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "bucket": "bm25_top",
+      "rel": 0,
+      "good": false,
+      "score": 0.267,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C21830565",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.367,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C84356308",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.7,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C58165257",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.3,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C15592167",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.6,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C25867805",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C26530575",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.8,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C11088337",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C28973180",
+      "bucket": "bm25_top",
+      "rel": 0,
+      "good": false,
+      "score": 0.467,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C61634281",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.433,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C23955183",
+      "bucket": "bm25_top",
+      "rel": 0,
+      "good": false,
+      "score": 0.3,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C28867567",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.3,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C21595057",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.067,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C18365791",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.233,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J05",
+      "cand": "C12071138",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.6,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.786,
+      "lane": "review",
+      "reasons": [
+        "DATES_UNCLEAR"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C13313917",
+      "bucket": "near",
+      "rel": 1,
+      "good": false,
+      "score": 0.571,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C13130984",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.857,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J07",
+      "cand": "C80053367",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C34198885",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.714,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C38007664",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.143,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C25187733",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.714,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C14722634",
+      "bucket": "random_core",
+      "rel": 3,
+      "good": true,
+      "score": 0.857,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J07",
+      "cand": "C29998869",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.786,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J07",
+      "cand": "C31710562",
+      "bucket": "near",
+      "rel": 2,
+      "good": true,
+      "score": 0.929,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J07",
+      "cand": "C12071138",
+      "bucket": "hard_title_match",
+      "rel": 2,
+      "good": true,
+      "score": 0.929,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J07",
+      "cand": "C15011085",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.857,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C23139819",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 1.0,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J07",
+      "cand": "C24833063",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.714,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J07",
+      "cand": "C66741193",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.929,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C18171955",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.1,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C84356308",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.7,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C28623782",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C22925443",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.1,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C24670867",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C39674178",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.2,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C22622351",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C61634281",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.1,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C11441764",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C31710562",
+      "bucket": "near",
+      "rel": 1,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C26530575",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.6,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C12955994",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C11088337",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.1,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J09",
+      "cand": "C24967652",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.2,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C28724469",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.6,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C14496667",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.75,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C19545827",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.6,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C18569929",
+      "bucket": "hard_title_match",
+      "rel": 3,
+      "good": true,
+      "score": 0.6,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C21794875",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.6,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C57601040",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.3,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C16426777",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.6,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C38847011",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.65,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C93349646",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C18171955",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C20393721",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 0.9,
+      "lane": "shortlist",
+      "reasons": []
+    },
+    {
+      "job": "J10",
+      "cand": "C14449423",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C29865476",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C98559931",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.65,
+      "lane": "review",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J10",
+      "cand": "C12780508",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C26231609",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.542,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C28139742",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.25,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C78403342",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.667,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C81217013",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.417,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C24833063",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": true,
+      "score": 0.875,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C36425270",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C10464113",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.083,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C25187733",
+      "bucket": "hard_lookalike",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C78229715",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.417,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C13701259",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.417,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C10549585",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.25,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C19540089",
+      "bucket": "bm25_top",
+      "rel": 3,
+      "good": true,
+      "score": 0.708,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C20574232",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.167,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C16237710",
+      "bucket": "random_core",
+      "rel": 0,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "LOCATION",
+        "MUST_NOT_MET",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J11",
+      "cand": "C28939941",
+      "bucket": "hard_title_match",
+      "rel": 0,
+      "good": false,
+      "score": 0.167,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C23734441",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C95519832",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.45,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C28969385",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": false,
+      "score": 0.7,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C11773925",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C23416654",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": false,
+      "score": 0.8,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C21796843",
+      "bucket": "hard_lookalike",
+      "rel": 0,
+      "good": false,
+      "score": 0.4,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C27409087",
+      "bucket": "hard_title_match",
+      "rel": 2,
+      "good": false,
+      "score": 0.2,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C29821051",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": false,
+      "score": 0.6,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C19405513",
+      "bucket": "bm25_top",
+      "rel": 1,
+      "good": false,
+      "score": 0.45,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C47410104",
+      "bucket": "random_core",
+      "rel": 1,
+      "good": false,
+      "score": 0.3,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C20552814",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.2,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C19147603",
+      "bucket": "random_core",
+      "rel": 2,
+      "good": true,
+      "score": 0.7,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C28758002",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": false,
+      "score": 0.5,
+      "lane": "review",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL",
+        "BORDERLINE"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C38688388",
+      "bucket": "near",
+      "rel": 0,
+      "good": false,
+      "score": 0.3,
+      "lane": "low_priority",
+      "reasons": [
+        "MUST_NOT_MET",
+        "MUST_PARTIAL"
+      ]
+    },
+    {
+      "job": "J12",
+      "cand": "C15289348",
+      "bucket": "bm25_top",
+      "rel": 2,
+      "good": false,
+      "score": 0.8,
+      "lane": "shortlist",
+      "reasons": [
+        "MUST_PARTIAL"
+      ]
+    }
+  ],
+  "thresholds": {
+    "shortlist_at": 0.525,
+    "low_priority_below": 0.35,
+    "max_unmet_musts": 1,
+    "cost_missed_good": 5,
+    "cost_bad_shortlist": 1
+  }
+}

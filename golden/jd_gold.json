@@ -1,0 +1,184 @@
+{
+  "J01": {
+    "must": [
+      "bachelor's degree in accounting or finance",
+      "1-3 years accounting experience",
+      "Microsoft Office/Excel",
+      "understanding of GAAP and SOX"
+    ],
+    "nice": [
+      "CPA or CPA track",
+      "restaurant or retail industry experience",
+      "Big 4 public accounting experience"
+    ]
+  },
+  "J02": {
+    "must": [
+      "bachelor's degree in accounting, finance or related field",
+      "5+ years accounting experience in a similar role",
+      "Timberline (Sage 300) or similar bookkeeping software",
+      "GAAP compliance and financial statement preparation",
+      "general ledger management and period-end close"
+    ],
+    "nice": [
+      "construction industry experience",
+      "construction WIP schedules and job costing",
+      "bonding and bank compliance reporting",
+      "external auditor liaison"
+    ]
+  },
+  "J03": {
+    "must": [
+      "associate or bachelor degree in accounting",
+      "payroll processing experience",
+      "accounts payable invoice processing and vendor reconciliation",
+      "ERP system experience",
+      "payroll tax filings and labor law compliance"
+    ],
+    "nice": [
+      "ADP experience (WorkforceNow, Celergo)",
+      "Microsoft Dynamics 365",
+      "international payroll"
+    ]
+  },
+  "J04": {
+    "must": [
+      "accounts receivable and revenue accounting experience",
+      "working knowledge of GAAP",
+      "reconciliation of bank/treasury activity to the financial system",
+      "Microsoft Office proficiency",
+      "automated financial systems and multiple fund sources",
+      "preparing financial reports and statements"
+    ],
+    "nice": [
+      "state or government accounting experience",
+      "collections / debt set-off experience",
+      "bachelor's degree in accounting or related field"
+    ]
+  },
+  "J05": {
+    "must": [
+      "bachelor's degree in accounting or related field",
+      "CPA license or Bar license",
+      "7+ years related tax experience",
+      "4+ years supervising and training experience",
+      "expertise in corporate, partnership, individual and trust and estate taxation",
+      "federal estate, gift and generation-skipping tax"
+    ],
+    "nice": [
+      "master of tax or JD/LLM",
+      "public accounting or law firm experience",
+      "private client / high net worth experience",
+      "business development and client engagement management"
+    ]
+  },
+  "J06": {
+    "must": [
+      "bachelor's degree in accounting or finance",
+      "5+ years relevant experience",
+      "budgeting, forecasting and core FP&A experience",
+      "Excel and PowerPoint proficiency",
+      "financial statement and consolidated reporting support"
+    ],
+    "nice": [
+      "healthcare experience",
+      "lender reporting",
+      "cost savings / ad hoc deep-dive analysis",
+      "strategic and M&A analysis"
+    ]
+  },
+  "J07": {
+    "must": [
+      "7 years relevant finance experience including leadership",
+      "bachelor's degree or equivalent experience",
+      "month-end reporting and variance commentary",
+      "budget and forecast preparation and consolidation",
+      "financial analysis and management reporting for functional leaders"
+    ],
+    "nice": [
+      "insurance industry experience",
+      "KPI identification and financial modeling",
+      "ad hoc and special project analysis"
+    ]
+  },
+  "J08": {
+    "must": [
+      "bachelor's degree in accounting",
+      "5+ years full-cycle accounting experience",
+      "monthly close, journal entries and account reconciliations under GAAP",
+      "general ledger, AR and AP experience",
+      "ERP systems",
+      "financial statement preparation, consolidation and flux analysis"
+    ],
+    "nice": [
+      "master's degree",
+      "public accounting experience",
+      "audit coordination and internal controls",
+      "collections and W2/W3 familiarity"
+    ]
+  },
+  "J09": {
+    "must": [
+      "CPA certification",
+      "4+ years audit experience",
+      "2+ years Big 4 public-company audit under SOX",
+      "2+ years supervisory experience in SOX audit",
+      "knowledge of COSO, SOX and PCAOB standards",
+      "SOX control testing and audit reporting"
+    ],
+    "nice": [
+      "IT / systems controls audit",
+      "international audit travel",
+      "audit tools such as AuditBoard"
+    ]
+  },
+  "J10": {
+    "must": [
+      "associate degree in accounting or business administration",
+      "3-5 years payroll experience",
+      "weekly payroll processing and reconciliation",
+      "time and attendance system / payroll system experience",
+      "payroll tax, garnishment and wage-attachment compliance",
+      "Excel skills (VLOOKUP, pivot tables)"
+    ],
+    "nice": [
+      "UKG time and attendance",
+      "Ceridian payroll system",
+      "union payroll and benefit time calculation"
+    ]
+  },
+  "J11": {
+    "must": [
+      "four-year degree in accounting or finance",
+      "1-2+ years manufacturing finance / cost accounting",
+      "SAP and/or Oracle experience",
+      "knowledge of GAAP and SOX",
+      "strong Excel skills",
+      "standard cost, variance analysis and inventory reconciliation",
+      "monthly close and balance sheet reconciliations"
+    ],
+    "nice": [
+      "CMA, CFA or CPA",
+      "advanced degree",
+      "Hyperion consolidation",
+      "excess and obsolete inventory review"
+    ]
+  },
+  "J12": {
+    "must": [
+      "5-7 years accounting experience",
+      "professional accreditation (CPA, ACCA, ACA, CIMA or equivalent)",
+      "bachelor's degree in accounting, finance or related field",
+      "advanced Excel proficiency",
+      "accounting software experience",
+      "bookkeeping, accounting principles and regulations",
+      "oversight/management of accounting operations and financial reporting"
+    ],
+    "nice": [
+      "financial services background",
+      "NetSuite",
+      "advanced degree",
+      "budgeting and forecasting"
+    ]
+  }
+}

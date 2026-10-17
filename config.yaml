@@ -1,0 +1,55 @@
+# Tally: finance & accounting screening. Single source of truth for data, model and policy settings.
+seed: 7
+present_fallback: "2018-12"   # "Current" in a resume = latest date written in that resume; this only if it has none
+
+paths:
+  resumes_csv: data/raw/Resume.csv
+  postings_csv: data/raw/postings.csv
+  work: data/work               # masked subsample (committed); raw/ is gitignored
+  db: data/tally.sqlite         # LLM cache + work queue + recruiter actions
+  golden: golden
+  results: results
+
+llm:
+  provider: queue               # queue = prompts answered by Claude Sonnet agents; gemini = live API (LLM_PROVIDER env)
+  gemini_model: gemini-3.5-flash-lite
+  temperature: 0.0
+  prompt_version: p1
+
+# One posting per role slot, chosen by data/select_jobs rules in tally/prep.py (title regex, 300-900 words, seeded).
+job_slots:
+  J01: {pattern: '^staff accountant$', level: Entry level}
+  J02: {pattern: '^senior accountant$', level: Mid-Senior level}
+  J03: {pattern: 'accounts payable (?:specialist|clerk)', level: null}
+  J04: {pattern: 'accounts receivable', level: null}
+  J05: {pattern: '^tax (?:accountant|senior)', level: null}
+  J06: {pattern: '^financial analyst$', level: null}
+  J07: {pattern: 'fp&a|financial planning', level: Mid-Senior level}
+  J08: {pattern: '^(?:assistant )?controller$', level: null}
+  J09: {pattern: 'internal audit', level: null}
+  J10: {pattern: 'payroll (?:specialist|accountant)', level: null}
+  J11: {pattern: 'cost accountant', level: null}
+  J12: {pattern: '^accounting manager$', level: null}
+
+resumes:
+  core_categories: [ACCOUNTANT, FINANCE]      # all taken
+  near_categories: [BANKING, CONSULTANT, BUSINESS-DEVELOPMENT, SALES]   # 10 each: plausible-but-wrong
+  far_sample: 20                              # random other categories: easy negatives
+  min_words: 120
+
+golden:
+  pairs_per_job: 15
+  buckets: {bm25_top: 5, random_core: 5, near: 3, hard: 2}
+  dev_jobs: [J01, J06, J08]                    # thresholds tuned here only; the other 9 jobs are test
+
+score:
+  must_weight: 2.0
+  nice_weight: 1.0
+  credit: {met: 1.0, partial: 0.5, not_met: 0.0}
+
+triage:
+  shortlist_at: 0.70            # tuned on dev (results/thresholds.json overrides)
+  low_priority_below: 0.35
+  max_unmet_musts: 1            # shortlist allows at most one must-have that is partial or missing (chosen on dev)
+  cost_missed_good: 5           # cost of NOT shortlisting a good candidate
+  cost_bad_shortlist: 1         # cost of shortlisting a weak one

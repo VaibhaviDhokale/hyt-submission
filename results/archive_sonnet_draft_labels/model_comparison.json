@@ -1,0 +1,247 @@
+{
+  "pairs_compared": 180,
+  "score_spearman": 0.842,
+  "score_mean_abs_diff": 0.107,
+  "same_lane": 0.611,
+  "lane_crosstab_sonnet_to_gemini": {
+    "low_priority -> low_priority": 16,
+    "low_priority -> review": 20,
+    "low_priority -> shortlist": 5,
+    "review -> low_priority": 5,
+    "review -> review": 59,
+    "review -> shortlist": 22,
+    "shortlist -> review": 18,
+    "shortlist -> shortlist": 35
+  },
+  "shortlist_flips": 45,
+  "checklists": {
+    "J01": {
+      "sonnet_reqs": 7,
+      "gemini_reqs": 7,
+      "sonnet_musts": 4,
+      "gemini_musts": 4
+    },
+    "J02": {
+      "sonnet_reqs": 5,
+      "gemini_reqs": 8,
+      "sonnet_musts": 3,
+      "gemini_musts": 7
+    },
+    "J03": {
+      "sonnet_reqs": 4,
+      "gemini_reqs": 5,
+      "sonnet_musts": 2,
+      "gemini_musts": 2
+    },
+    "J04": {
+      "sonnet_reqs": 6,
+      "gemini_reqs": 5,
+      "sonnet_musts": 5,
+      "gemini_musts": 4
+    },
+    "J05": {
+      "sonnet_reqs": 9,
+      "gemini_reqs": 9,
+      "sonnet_musts": 6,
+      "gemini_musts": 6
+    },
+    "J06": {
+      "sonnet_reqs": 5,
+      "gemini_reqs": 6,
+      "sonnet_musts": 4,
+      "gemini_musts": 5
+    },
+    "J07": {
+      "sonnet_reqs": 5,
+      "gemini_reqs": 6,
+      "sonnet_musts": 2,
+      "gemini_musts": 6
+    },
+    "J08": {
+      "sonnet_reqs": 9,
+      "gemini_reqs": 8,
+      "sonnet_musts": 6,
+      "gemini_musts": 6
+    },
+    "J09": {
+      "sonnet_reqs": 5,
+      "gemini_reqs": 6,
+      "sonnet_musts": 5,
+      "gemini_musts": 6
+    },
+    "J10": {
+      "sonnet_reqs": 6,
+      "gemini_reqs": 6,
+      "sonnet_musts": 4,
+      "gemini_musts": 5
+    },
+    "J11": {
+      "sonnet_reqs": 7,
+      "gemini_reqs": 7,
+      "sonnet_musts": 5,
+      "gemini_musts": 4
+    },
+    "J12": {
+      "sonnet_reqs": 6,
+      "gemini_reqs": 8,
+      "sonnet_musts": 4,
+      "gemini_musts": 5
+    }
+  },
+  "thresholds": {
+    "sonnet": {
+      "shortlist_at": 0.525,
+      "low_priority_below": 0.35,
+      "tuned_on": "dev jobs J01,J06,J08",
+      "n_dev_pairs": 45,
+      "dev": {
+        "shortlisted": 16,
+        "good": 22,
+        "true_shortlists": 15,
+        "shortlist_precision": 0.9375,
+        "shortlist_recall": 0.6818181818181818,
+        "review_rate": 0.6444444444444444,
+        "good_in_low_priority": 0,
+        "cost": 36
+      },
+      "gate_variants_dev": {
+        "all musts met": {
+          "shortlist_at": 0.725,
+          "cost": 85,
+          "shortlist_precision": 1.0,
+          "shortlist_recall": 0.22727272727272727
+        },
+        "<=1 must unmet (chosen)": {
+          "shortlist_at": 0.525,
+          "cost": 36,
+          "shortlist_precision": 0.9375,
+          "shortlist_recall": 0.6818181818181818
+        },
+        "<=2 musts unmet": {
+          "shortlist_at": 0.4,
+          "cost": 14,
+          "shortlist_precision": 0.8333333333333334,
+          "shortlist_recall": 0.9090909090909091
+        },
+        "score only": {
+          "shortlist_at": 0.45,
+          "cost": 16,
+          "shortlist_precision": 0.7692307692307693,
+          "shortlist_recall": 0.9090909090909091
+        }
+      },
+      "max_unmet_musts": 1
+    },
+    "gemini": {
+      "shortlist_at": 0.525,
+      "low_priority_below": 0.35,
+      "tuned_on": "dev jobs J01,J06,J08",
+      "n_dev_pairs": 45,
+      "dev": {
+        "shortlisted": 20,
+        "good": 22,
+        "true_shortlists": 17,
+        "shortlist_precision": 0.85,
+        "shortlist_recall": 0.7727272727272727,
+        "review_rate": 0.5555555555555556,
+        "good_in_low_priority": 0,
+        "cost": 28
+      },
+      "gate_variants_dev": {
+        "all musts met": {
+          "shortlist_at": 0.725,
+          "cost": 70,
+          "shortlist_precision": 1.0,
+          "shortlist_recall": 0.36363636363636365
+        },
+        "<=1 must unmet (chosen)": {
+          "shortlist_at": 0.525,
+          "cost": 28,
+          "shortlist_precision": 0.85,
+          "shortlist_recall": 0.7727272727272727
+        },
+        "<=2 musts unmet": {
+          "shortlist_at": 0.525,
+          "cost": 19,
+          "shortlist_precision": 0.6896551724137931,
+          "shortlist_recall": 0.9090909090909091
+        },
+        "score only": {
+          "shortlist_at": 0.525,
+          "cost": 21,
+          "shortlist_precision": 0.6451612903225806,
+          "shortlist_recall": 0.9090909090909091
+        }
+      },
+      "max_unmet_musts": 1
+    }
+  },
+  "metrics": {
+    "sonnet": {
+      "n_pairs": 135,
+      "n_jobs": 9,
+      "ndcg@5": 0.817,
+      "ndcg@10": 0.871,
+      "p@5": 0.711,
+      "spearman": 0.663,
+      "shortlisted": 37,
+      "good": 33,
+      "true_shortlists": 20,
+      "shortlist_precision": 0.5405405405405406,
+      "shortlist_recall": 0.6060606060606061,
+      "review_rate": 0.7259259259259259,
+      "good_in_low_priority": 0,
+      "cost": 82,
+      "ndcg@5_ci": [
+        0.706,
+        0.911
+      ],
+      "lanes": {
+        "shortlist": 37,
+        "review": 64,
+        "low_priority": 34
+      },
+      "label_dist": {
+        "0": 35,
+        "1": 44,
+        "2": 30,
+        "3": 26
+      }
+    },
+    "gemini": {
+      "n_pairs": 135,
+      "n_jobs": 9,
+      "ndcg@5": 0.845,
+      "ndcg@10": 0.873,
+      "p@5": 0.733,
+      "spearman": 0.674,
+      "shortlisted": 42,
+      "good": 33,
+      "true_shortlists": 18,
+      "shortlist_precision": 0.42857142857142855,
+      "shortlist_recall": 0.5454545454545454,
+      "review_rate": 0.6888888888888889,
+      "good_in_low_priority": 0,
+      "cost": 99,
+      "ndcg@5_ci": [
+        0.789,
+        0.905
+      ],
+      "lanes": {
+        "shortlist": 42,
+        "review": 75,
+        "low_priority": 18
+      },
+      "label_dist": {
+        "0": 35,
+        "1": 44,
+        "2": 30,
+        "3": 26
+      }
+    }
+  },
+  "model": {
+    "sonnet": "claude-sonnet-agent",
+    "gemini": "gemini-3.1-flash-lite"
+  }
+}

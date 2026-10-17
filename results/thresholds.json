@@ -1,0 +1,43 @@
+{
+  "shortlist_at": 0.525,
+  "low_priority_below": 0.35,
+  "tuned_on": "dev jobs J01,J06,J08",
+  "n_dev_pairs": 45,
+  "dev": {
+    "shortlisted": 16,
+    "good": 23,
+    "true_shortlists": 16,
+    "shortlist_precision": 1.0,
+    "shortlist_recall": 0.6956521739130435,
+    "review_rate": 0.6444444444444444,
+    "good_in_low_priority": 0,
+    "cost": 35
+  },
+  "gate_variants_dev": {
+    "all musts met": {
+      "shortlist_at": 0.725,
+      "cost": 90,
+      "shortlist_precision": 1.0,
+      "shortlist_recall": 0.21739130434782608
+    },
+    "<=1 must unmet (chosen)": {
+      "shortlist_at": 0.525,
+      "cost": 35,
+      "shortlist_precision": 1.0,
+      "shortlist_recall": 0.6956521739130435
+    },
+    "<=2 musts unmet": {
+      "shortlist_at": 0.4,
+      "cost": 13,
+      "shortlist_precision": 0.875,
+      "shortlist_recall": 0.9130434782608695
+    },
+    "score only": {
+      "shortlist_at": 0.45,
+      "cost": 15,
+      "shortlist_precision": 0.8076923076923077,
+      "shortlist_recall": 0.9130434782608695
+    }
+  },
+  "max_unmet_musts": 1
+}

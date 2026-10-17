@@ -1,0 +1,80 @@
+{
+  "jobs": {
+    "J01": {
+      "title": "Staff Accountant",
+      "source_job_id": 3904703938,
+      "split": "dev"
+    },
+    "J02": {
+      "title": "Senior Accountant",
+      "source_job_id": 3904966880,
+      "split": "test"
+    },
+    "J03": {
+      "title": "Payroll and Accounts Payable Specialist",
+      "source_job_id": 3901936459,
+      "split": "test"
+    },
+    "J04": {
+      "title": "Accounts Receivable Accountant Sr.",
+      "source_job_id": 3891079198,
+      "split": "test"
+    },
+    "J05": {
+      "title": "Tax Senior Manager - Estate and Gifts",
+      "source_job_id": 3901942656,
+      "split": "test"
+    },
+    "J06": {
+      "title": "Financial Analyst",
+      "source_job_id": 3901388713,
+      "split": "dev"
+    },
+    "J07": {
+      "title": "Manager Finance - FP&A Expense Leader",
+      "source_job_id": 3904577522,
+      "split": "test"
+    },
+    "J08": {
+      "title": "Controller",
+      "source_job_id": 3905310030,
+      "split": "dev"
+    },
+    "J09": {
+      "title": "Senior Internal Auditor",
+      "source_job_id": 3904946151,
+      "split": "test"
+    },
+    "J10": {
+      "title": "Payroll Specialist",
+      "source_job_id": 3894886439,
+      "split": "test"
+    },
+    "J11": {
+      "title": "Sr. Cost Accountant",
+      "source_job_id": 3884822331,
+      "split": "test"
+    },
+    "J12": {
+      "title": "Accounting Manager",
+      "source_job_id": 3898169976,
+      "split": "test"
+    }
+  },
+  "n_resumes": 295,
+  "by_tier": {
+    "core": 235,
+    "near": 40,
+    "far": 20
+  },
+  "dropped": {
+    "duplicate": [
+      {
+        "id": "C28398216",
+        "of": "C19147603"
+      }
+    ],
+    "too_short": []
+  },
+  "injection_flagged": []
+}

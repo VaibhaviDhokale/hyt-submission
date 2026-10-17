@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tally Screening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+      --color-paper: #f6f4ef;
+      --color-card: #ffffff;
+      --color-ink: #1d2b24;
+      --color-muted: #66706a;
+      --color-rule: #e2ded4;
+      --color-met: #2f7d55;
+      --color-part: #b7791f;
+      --color-miss: #b4443c;
+      --color-accent: #1f5f8b;
+    }
+    @custom-variant dark (&:where(.dark, .dark *));
+    .dark {
+      --color-paper: #121614;
+      --color-card: #1b211e;
+      --color-ink: #e7ece9;
+      --color-muted: #9aa49e;
+      --color-rule: #2c3530;
+      --color-met: #5fbf8a;
+      --color-part: #e0a84a;
+      --color-miss: #e2766d;
+      --color-accent: #6aa9d6;
+    }
+    mark.ev { background: color-mix(in srgb, var(--color-met) 22%, transparent); color: inherit; border-radius: 3px; padding: 0 2px; }
+    kbd { @apply font-mono text-[11px] px-1.5 py-0.5 rounded border border-rule bg-paper text-muted; }
+  </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased min-h-screen">
+  <header class="border-b border-rule bg-card/80 backdrop-blur sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-4">
+      <a href="#/" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="inline-grid place-items-center w-7 h-7 rounded-md bg-ink text-paper font-mono text-sm">T</span>
+        Tally
+      </a>
+      <span class="text-muted text-sm hidden sm:inline">screening for finance &amp; accounting roles</span>
+      <nav class="ml-auto flex items-center gap-1 text-sm">
+        <a href="#/" class="px-3 py-1.5 rounded-md hover:bg-paper" data-nav="jobs">Jobs</a>
+        <a href="#/metrics" class="px-3 py-1.5 rounded-md hover:bg-paper" data-nav="metrics">Evaluation</a>
+        <button id="theme" class="ml-1 px-2 py-1.5 rounded-md hover:bg-paper text-muted" title="Toggle dark mode">◐</button>
+      </nav>
+    </div>
+  </header>
+  <main id="view" class="max-w-6xl mx-auto px-4 py-6"></main>
+  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 hidden px-4 py-2 rounded-lg bg-ink text-paper text-sm shadow-lg z-50"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

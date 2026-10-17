@@ -1,0 +1,20 @@
+{
+  "pairs": 180,
+  "relevance_weighted_kappa": 0.903,
+  "relevance_exact": 0.767,
+  "relevance_within_1": 1.0,
+  "decision_kappa": 0.899,
+  "decision_agreement": 0.956,
+  "human_mean_relevance": 1.23,
+  "sonnet_mean_relevance": 1.43,
+  "decision_crosstab_human_vs_sonnet": {
+    "review / review": 117,
+    "shortlist / review": 8,
+    "shortlist / shortlist": 55
+  },
+  "relevance_diff_human_minus_sonnet": {
+    "-1": 39,
+    "0": 138,
+    "1": 3
+  }
+}

@@ -1,0 +1,31 @@
+job,cand,grounded,gaps_correct,actionable,rationale
+J12,C95519832,4,5,5,The explanation correctly identifies missing must-haves. It slightly miscalculates total years of experience but correctly identifies the candidate lacks the required professional accreditation and software proficiency.
+J10,C14496667,3,2,3,The screener incorrectly claims UKG/Ceridian are 'nice-to-have' when they are listed as 'must-have' requirements. It also misidentifies the degree requirement as met despite the mismatch.
+J03,C11877150,4,5,5,"The explanation correctly identifies missing requirements. It mislabels the degree as a bachelor's instead of an associate's, but correctly identifies the candidate lacks payroll experience."
+J11,C78229715,3,3,4,The explanation incorrectly lists SAP as a must-have (it is nice-to-have) and misidentifies GAAP/SOX as missing despite the candidate's extensive accounting background and corporate governance experience.
+J04,C14449423,5,5,5,The audit accurately identifies the candidate's strengths and the specific missing GAAP requirement. The evidence provided is directly supported by the resume text.
+J07,C12071138,4,2,3,"The resume clearly demonstrates month-end reporting experience, which the screener incorrectly identified as a gap. The screener also miscalculated the total years of experience."
+J02,C15535920,4,4,5,"The explanation correctly identifies the lack of accounting experience. It slightly mislabels the degree requirement as met, despite noting the mismatch in the degree field."
+J11,C36425270,3,2,3,"The explanation incorrectly labels SAP as a 'must' requirement and misidentifies the candidate's total years of finance experience, while failing to note the lack of manufacturing experience."
+J03,C10554236,5,5,5,"The audit accurately identifies the degree requirement, notes the missing payroll experience, and correctly lists the missing software skills. It is actionable and grounded in the resume."
+J09,C12955994,4,5,5,"The audit correctly identifies the missing CPA and lack of specific Big 4/SOX experience, though it slightly overstates the candidate's audit experience as partial."
+J07,C14181049,4,2,3,"The audit claims dates are missing, but the resume provides clear dates for roles back to 1997. It incorrectly labels required skills as 'nice to have' gaps."
+J11,C28939941,5,5,5,"The audit correctly identifies that the candidate lacks the required accounting degree, manufacturing finance experience, and specific technical/regulatory knowledge required for a Sr. Cost Accountant role."
+J05,C23955183,4,5,4,The explanation accurately identifies missing requirements. It incorrectly labels the Bachelor's degree as 'met' while simultaneously noting it is a mismatch for the specific degree requested.
+J11,C20574232,5,4,5,"The audit correctly identifies the candidate is an IT professional, not an accountant. It mislabels Excel as a missing 'must-have' when it is a 'nice-to-have' requirement."
+J05,C28973180,1,2,2,"The explanation incorrectly claims the candidate met the Bachelor's and Master's requirements. The candidate has a Civil Engineering degree, not Accounting or Tax. It misinterprets the resume entirely."
+J11,C16237710,2,3,3,The explanation incorrectly claims the candidate met the degree and manufacturing finance requirements. It also misidentifies SAP as a must-have requirement when it is listed as nice-to-have.
+J03,C20918464,4,5,5,"The explanation correctly identifies the payroll experience and missing software skills. It accurately notes the degree discrepancy, though it mislabels the M.Com/B.Com as an Associate degree."
+J09,C22622351,4,5,5,"The audit correctly identifies the missing CPA and partial SOX requirements. It slightly overstates the 'audit experience' as the candidate is primarily a controller/manager, not an auditor."
+J02,C11441764,3,3,4,"The explanation misidentifies the degree requirement as a gap, despite the resume listing a BS in Accounting. It correctly identifies missing software and construction-specific experience."
+J04,C14722634,5,5,5,The audit accurately identifies the candidate's strengths and missing requirements. It correctly highlights the lack of explicit Microsoft Office mention and the partial evidence for automated systems.
+J02,C78257294,5,4,5,"The audit correctly identifies missing requirements. It missed that Construction WIP analysis is a mandatory requirement (R8), not a nice-to-have, but otherwise accurately assesses the candidate's profile."
+J12,C47410104,2,3,3,The audit incorrectly claims 0 years of finance experience and misidentifies the degree requirement. It misses the candidate's extensive 15+ years of relevant financial experience.
+J12,C20552814,2,5,4,"The explanation incorrectly claims 2.2 years of finance experience; the resume shows only about 2.5 years of total relevant experience, not 8.8. Otherwise, it correctly identifies missing requirements."
+J02,C24294778,4,3,4,"The audit correctly identifies the degree and experience. It misses that Construction WIP analysis (R8) is a mandatory requirement, not just a nice-to-have."
+J02,C53640713,3,3,4,"The audit miscalculates total experience (resume shows >8 years, not 4.3) and incorrectly claims the degree requirement is unmet; the candidate holds a B.Com in Tax."
+J09,C11441764,3,4,4,"The explanation incorrectly claims the candidate has Big 4 experience, which is not present in the resume. It correctly identifies the missing CPA certification."
+J07,C29998869,4,3,4,"The resume clearly demonstrates budgeting, forecasting, and reporting experience. The screener incorrectly labels these as 'partial' or 'missing' gaps when they are well-documented in the experience section."
+J04,C23734441,5,2,3,"The resume explicitly lists MS Office applications in the skills section, so the gap is incorrect. The recruiter has sufficient evidence to proceed without further questioning."
+J03,C27233183,5,5,5,"The explanation accurately identifies the lack of required accounting education and payroll experience, correctly noting the candidate is unqualified for the role."
+J09,C24670867,3,4,4,"The resume does not mention Big 4 experience, which the explanation incorrectly labels as partial. It correctly identifies the missing CPA and supervisory SOX audit experience."

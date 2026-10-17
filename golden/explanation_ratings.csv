@@ -1,0 +1,31 @@
+job,cand,grounded,gaps_correct,actionable,comment
+J12,C95519832,3,4,4,Degree and stated finance tenure are plausible from the excerpt; years are inferred rather than tied to dated accounting roles. Follow-up is specific (accreditation).
+J10,C14496667,3,4,4,"Degree and office-suite quote support some claims, but finance tenure is treated as payroll tenure; the laws/regulations quote only shows payroll projections. The follow-up names the partial must-have."
+J03,C11877150,4,4,4,"Accounting bachelor supports the education claim; no payroll evidence is shown, and ADP/Dynamics are reasonable listed gaps. The follow-up is specific."
+J11,C78229715,2,4,4,"Degree and Excel keywords are supported, but generic finance years do not establish manufacturing costing; GAAP/SOX knowledge is not evidenced. SAP is a useful next check."
+J04,C14449423,4,4,4,"Direct quotes support procedures, reconciliation, Office, and Solomon/GL claims; GAAP is not evidenced. The single missing requirement is clear to verify."
+J07,C12071138,4,4,3,"The budget quote supports expense budgeting; degree/years claims are plausible. The reporting quote is broad compliance reporting, not month-end close/commentary; the follow-up lacks a concrete verification prompt."
+J02,C15535920,3,4,4,"Business-management education may be related, but 0 finance-relevant years leaves 5+ similar-role experience unsupported without role-specific evidence. Software/construction gaps appear complete."
+J11,C36425270,4,4,4,Accounting degree and direct GAAP/Excel snippets support the statuses; years imply manufacturing-costing experience without showing that domain. SAP is a useful next check.
+J03,C10554236,4,4,4,The accounting associate claim is explicit; payroll and listed systems are not evidenced. The follow-up is direct.
+J09,C12955994,2,4,3,"The SOX/financial-audit quote shows some exposure, but 0 finance years is used to assess 4+ audit years despite the audit language. Several specific requirements remain uncertain."
+J07,C14181049,2,3,3,"The close-process quote supports month-end reporting and the budget-tool quote supports budgeting, but the explanation gives 9 years and also says dates cannot be computed. That internal inconsistency reduces trust."
+J11,C28939941,4,4,4,The Excel listing supports partial proficiency; no evidence supports manufacturing costing or an accounting/finance bachelor’s. The gap list tracks the must-have criteria shown.
+J05,C23955183,3,2,3,"Training and business-development snippets are plausible, but Master of Tax/JD/LLM is marked partial yet omitted from Gaps. Tenure is inferred from the finance-years measure."
+J11,C20574232,2,3,3,"The education mismatch is surfaced, but manufacturing costing is marked partial despite 0 finance-relevant years and no domain evidence. The list otherwise covers the must-haves."
+J05,C28973180,1,1,2,A civil-engineering master’s is claimed to meet both the accounting/related bachelor’s and tax/JD requirement; neither is supported. Both credential gaps are omitted from Gaps.
+J11,C16237710,3,4,4,The Excel financial-system quote supports Excel; Business Studies and general finance tenure do not by themselves prove an accounting degree or manufacturing costing. Major software/accounting gaps are listed.
+J03,C20918464,4,4,4,A Master of Commerce and explicit payroll-administration quote support both must-haves; ADP and Dynamics are clear optional gaps.
+J09,C22622351,2,4,3,"Audit-process and workpaper quotes support some audit exposure, but 21.3 finance years do not establish 4+ audit years. Big 4/public-company, supervisory, and PCAOB criteria remain unverified."
+J02,C11441764,3,4,4,SAP implementation is not direct evidence of Timberline/Sage 300; the related degree and finance years are plausible. Construction/WIP gaps are listed and the next check is concrete.
+J04,C14722634,4,4,4,"Direct GAAP, reconciliation, and systems quotes support the claims; Office-suite absence cannot be verified from the excerpt. The Microsoft Office follow-up is specific."
+J02,C78257294,3,4,4,"The Accountancy degree is supported; 13.3 finance years do not prove construction-specific similar work. Software, construction, and WIP gaps align with the stated criteria."
+J12,C47410104,4,4,3,"The finance/operations master’s supports related education; Oracle and Hyperion show accounting systems but not advanced Excel specifically, appropriately marked partial. The years follow-up is relevant."
+J12,C20552814,3,4,4,The generic “banking and financial services background” supports the domain claim only weakly; 2.2 years versus 5–7 is plausible partial. Listed mandatory gaps appear complete.
+J02,C24294778,4,4,4,"Accounting degree, finance tenure, and Sage/ACCPAC terms give some support; none directly names Sage 300, so partial is cautious. The follow-up is focused."
+J02,C53640713,3,4,4,"The related finance master’s and tenure estimate are plausible, but a generic software/computer-programs phrase weakly supports Timberline. Criteria gaps seem complete; the follow-up names the main blocker."
+J09,C11441764,2,4,3,"Finance years and the SOX-compliance phrase do not substantiate audit tenure, Big 4 work, or supervisory audit experience. Gaps are listed, but asking only about CPA may miss other major checks."
+J07,C29998869,3,4,3,"The degree and budget values are grounded in snippets, but finance tenure does not prove leadership; reporting/budget quotes only partially support the nice-to-haves. The verification target is broad."
+J04,C23734441,4,4,4,"Accounting-close, GAAP, reconciliation, and Office keywords support the statuses; the Office-suite claim is reasonably partial. The missing item is clearly identified."
+J03,C27233183,3,3,3,High-school education plainly does not meet an associate-degree requirement; labeling this gap partial rather than not met understates it. Payroll/software gaps are clear.
+J09,C24670867,2,4,3,The 5.2 finance years do not prove 4+ years of audit work; snippets show some SOX audit exposure but not tenure or Big 4/supervisory/PCAOB depth. CPA is only one of several checks.

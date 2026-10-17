@@ -1,0 +1,26 @@
+{
+  "checklist_must": {
+    "precision": 0.767,
+    "recall": 0.662,
+    "f1": 0.71
+  },
+  "checklist_all": {
+    "precision": 0.802,
+    "recall": 0.609,
+    "f1": 0.693
+  },
+  "certifications": {
+    "precision": 0.857,
+    "recall": 0.857,
+    "f1": 0.857
+  },
+  "software": {
+    "precision": 0.594,
+    "recall": 0.978,
+    "f1": 0.739
+  },
+  "education_accuracy": 0.81,
+  "finance_years_mae": 3.14,
+  "finance_years_within_1y": 0.524,
+  "n_resumes": 21
+}

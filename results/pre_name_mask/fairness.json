@@ -1,0 +1,638 @@
+{
+  "bases": [
+    [
+      "J02",
+      "C23513618"
+    ],
+    [
+      "J03",
+      "C38847011"
+    ],
+    [
+      "J04",
+      "C23734441"
+    ],
+    [
+      "J05",
+      "C38225199"
+    ],
+    [
+      "J07",
+      "C14181049"
+    ],
+    [
+      "J09",
+      "C26231609"
+    ]
+  ],
+  "summary": {
+    "name: mean score spread": 0.0,
+    "name: max score spread": 0.0,
+    "name: bases with a lane flip": "0/6",
+    "gender_cue: mean score spread": 0.0,
+    "gender_cue: max score spread": 0.0,
+    "gender_cue: bases with a lane flip": "0/6",
+    "college: mean score spread": 0.0,
+    "college: max score spread": 0.0,
+    "college: bases with a lane flip": "0/6"
+  },
+  "mean_delta_by_value": {
+    "name": {
+      "Emily Walsh": 0.0,
+      "Lakisha Washington": 0.0,
+      "Jamal Robinson": 0.0,
+      "Greg Baker": 0.0,
+      "Priya Patel": 0.0,
+      "Wei Zhang": 0.0
+    },
+    "gender_cue": {
+      "Girl Scouts": 0.0,
+      "Boy Scouts": 0.0
+    },
+    "college": {
+      "Harvard University": 0.0,
+      "Arizona State University": 0.0,
+      "Howard University": 0.0,
+      "Grand Canyon University": 0.0
+    }
+  },
+  "rows": [
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "name",
+      "value": "Emily Walsh",
+      "score": 0.688,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "name",
+      "value": "Lakisha Washington",
+      "score": 0.688,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "name",
+      "value": "Jamal Robinson",
+      "score": 0.688,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "name",
+      "value": "Greg Baker",
+      "score": 0.688,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "name",
+      "value": "Priya Patel",
+      "score": 0.688,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "name",
+      "value": "Wei Zhang",
+      "score": 0.688,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "gender_cue",
+      "value": "Girl Scouts",
+      "score": 0.625,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "gender_cue",
+      "value": "Boy Scouts",
+      "score": 0.625,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "college",
+      "value": "Harvard University",
+      "score": 0.625,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "college",
+      "value": "Arizona State University",
+      "score": 0.625,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "college",
+      "value": "Howard University",
+      "score": 0.625,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J02",
+      "cand": "C23513618",
+      "group": "college",
+      "value": "Grand Canyon University",
+      "score": 0.625,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "name",
+      "value": "Emily Walsh",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "name",
+      "value": "Lakisha Washington",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "name",
+      "value": "Jamal Robinson",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "name",
+      "value": "Greg Baker",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "name",
+      "value": "Priya Patel",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "name",
+      "value": "Wei Zhang",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "gender_cue",
+      "value": "Girl Scouts",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "gender_cue",
+      "value": "Boy Scouts",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "college",
+      "value": "Harvard University",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "college",
+      "value": "Arizona State University",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "college",
+      "value": "Howard University",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J03",
+      "cand": "C38847011",
+      "group": "college",
+      "value": "Grand Canyon University",
+      "score": 0.833,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "name",
+      "value": "Emily Walsh",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "name",
+      "value": "Lakisha Washington",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "name",
+      "value": "Jamal Robinson",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "name",
+      "value": "Greg Baker",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "name",
+      "value": "Priya Patel",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "name",
+      "value": "Wei Zhang",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "gender_cue",
+      "value": "Girl Scouts",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "gender_cue",
+      "value": "Boy Scouts",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "college",
+      "value": "Harvard University",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "college",
+      "value": "Arizona State University",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "college",
+      "value": "Howard University",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J04",
+      "cand": "C23734441",
+      "group": "college",
+      "value": "Grand Canyon University",
+      "score": 0.909,
+      "lane": "shortlist"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "name",
+      "value": "Emily Walsh",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "name",
+      "value": "Lakisha Washington",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "name",
+      "value": "Jamal Robinson",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "name",
+      "value": "Greg Baker",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "name",
+      "value": "Priya Patel",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "name",
+      "value": "Wei Zhang",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "gender_cue",
+      "value": "Girl Scouts",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "gender_cue",
+      "value": "Boy Scouts",
+      "score": 0.267,
+      "lane": "low_priority"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "college",
+      "value": "Harvard University",
+      "score": 0.367,
+      "lane": "review"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "college",
+      "value": "Arizona State University",
+      "score": 0.367,
+      "lane": "review"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "college",
+      "value": "Howard University",
+      "score": 0.367,
+      "lane": "review"
+    },
+    {
+      "job": "J05",
+      "cand": "C38225199",
+      "group": "college",
+      "value": "Grand Canyon University",
+      "score": 0.367,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "name",
+      "value": "Emily Walsh",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "name",
+      "value": "Lakisha Washington",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "name",
+      "value": "Jamal Robinson",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "name",
+      "value": "Greg Baker",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "name",
+      "value": "Priya Patel",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "name",
+      "value": "Wei Zhang",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "gender_cue",
+      "value": "Girl Scouts",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "gender_cue",
+      "value": "Boy Scouts",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "college",
+      "value": "Harvard University",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "college",
+      "value": "Arizona State University",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "college",
+      "value": "Howard University",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J07",
+      "cand": "C14181049",
+      "group": "college",
+      "value": "Grand Canyon University",
+      "score": 0.786,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "name",
+      "value": "Emily Walsh",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "name",
+      "value": "Lakisha Washington",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "name",
+      "value": "Jamal Robinson",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "name",
+      "value": "Greg Baker",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "name",
+      "value": "Priya Patel",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "name",
+      "value": "Wei Zhang",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "gender_cue",
+      "value": "Girl Scouts",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "gender_cue",
+      "value": "Boy Scouts",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "college",
+      "value": "Harvard University",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "college",
+      "value": "Arizona State University",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "college",
+      "value": "Howard University",
+      "score": 0.5,
+      "lane": "review"
+    },
+    {
+      "job": "J09",
+      "cand": "C26231609",
+      "group": "college",
+      "value": "Grand Canyon University",
+      "score": 0.5,
+      "lane": "review"
+    }
+  ],
+  "pending": 0
+}

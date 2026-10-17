@@ -1,0 +1,38 @@
+{
+  "agreement": {
+    "grounded κw": 0.515,
+    "gaps_correct κw": 0.137,
+    "actionable κw": 0.289,
+    "grounded within ±1": 0.9,
+    "gaps_correct within ±1": 0.8,
+    "actionable within ±1": 0.967,
+    "pairs": 30
+  },
+  "detail": {
+    "n": 30,
+    "grounded": {
+      "judge_mean": 3.13,
+      "reviewer_mean": 3.07,
+      "weighted_kappa": 0.515,
+      "exact": 0.5,
+      "within_1": 0.9,
+      "spearman": 0.473
+    },
+    "gaps_correct": {
+      "judge_mean": 3.37,
+      "reviewer_mean": 3.73,
+      "weighted_kappa": 0.137,
+      "exact": 0.367,
+      "within_1": 0.8,
+      "spearman": 0.087
+    },
+    "actionable": {
+      "judge_mean": 3.07,
+      "reviewer_mean": 3.57,
+      "weighted_kappa": 0.289,
+      "exact": 0.467,
+      "within_1": 0.967,
+      "spearman": 0.365
+    }
+  }
+}
